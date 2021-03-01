@@ -11,9 +11,9 @@ before_install:
   -in google-key.json.enc -out google-key.json -d
 - curl https://sdk.cloud.google.com | bash > /dev/null
 - source "$HOME/google-cloud-sdk/path.bash.inc"
-- gcloud auth activate-service-account --key-file=google_key.json
+- gcloud auth activate-service-account --key-file=google-key.json
 - gcloud config set project "${GCP_PROJECT_ID}"
-- export GOOGLE_APPLICATION_CREDENTIALS=./google_key.json
+- export GOOGLE_APPLICATION_CREDENTIALS=./google-key.json
 - wget https://releases.hashicorp.com/terraform/"$tf_version"/terraform_"$tf_version"_linux_amd64.zip
 - unzip terraform_"$tf_version"_linux_amd64.zip
 - sudo mv terraform /usr/local/bin/
