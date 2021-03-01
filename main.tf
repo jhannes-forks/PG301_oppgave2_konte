@@ -8,7 +8,7 @@ resource "google_compute_instance" "default" {
   machine_type = var.machinetype
   zone         = "us-central1-a"
 
-  tags = ["foo", "bar"]
+  tags = ["hei", "hade"]
 
   boot_disk {
     initialize_params {
