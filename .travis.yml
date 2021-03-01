@@ -20,10 +20,10 @@ before_install:
 - rm terraform_"$tf_version"_linux_amd64.zip
 install: true
 script:
-  - |-
-    export TF_VAR_project_id=$GCP_PROJECT_ID
-    export TF_VAR_machinetype=$TF_ENV_machine_type
-    terraform init
-    terraform plan
-    terraform apply --auto-approve
-    terraform output
+- |-
+  export TF_VAR_project_id=$GCP_PROJECT_ID
+  export TF_VAR_machinetype=$TF_ENV_machine_type
+  terraform init
+  terraform plan
+  terraform apply --auto-approve
+  terraform output
