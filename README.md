@@ -104,6 +104,13 @@ skal følge for å sette opp disse variablene.
 
 Dette er ulikt fra operativsystemr så jeg legger inn begge måtene under.
 
+```
+Støter sensor på problemer med å bruke `export` metoden
+for lage bucket mens han/hun bruker en mac, så kan man prøve med
+`set` metoden som man egentlig skal bruke for `windows`.
+Dette var i min tilfelle.
+```
+
 ### Dette skal gjøres for Windows
 
 - For gi `Bucket name`:
