@@ -1,3 +1,7 @@
+
+[![Build Status](https://travis-ci.com/omamoh18/PG301_oppgave2_konte.svg?token=yMbNk68jXyaqW9Hmq6pJ&branch=main)](https://travis-ci.com/omamoh18/PG301_oppgave2_konte)
+
+
 # Oppgave 2
 
 Her skulle vi lage terraform file som skulle holde på 
