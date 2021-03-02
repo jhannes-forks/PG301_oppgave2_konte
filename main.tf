@@ -4,7 +4,7 @@ resource "google_service_account" "default" {
 }
 
 resource "google_compute_instance" "default" {
-  name         = "test-account"
+  name         = "account"
   machine_type = var.machinetype
   zone         = "us-central1-a"
 

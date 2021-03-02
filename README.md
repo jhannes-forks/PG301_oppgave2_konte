@@ -216,3 +216,12 @@ Når dette er gjort så skal det pushes til github repositoriet. Når travis byg
 vil en ny `Virtuel machine` instanse og `machine type` som sensor velger være klar.
 
 
+# Kilder:
+
+### Jeg har brukt min gamle repo som inspo.
+
+- https://github.com/omamoh18/PGR301_Exam_Infrastructure
+  
+- https://www.terraform.io/downloads.html
+
+- https://cloud.google.com/sdk/docs/install
