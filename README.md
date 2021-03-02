@@ -156,5 +156,63 @@ Dette vil resultere til at en bucket i google cloud blir opprettet.
 
 # Oppgave 3
 
+Denne oppgaven går ut på at `travis` skal `instalere Gcloud sdk`, 
+`Autentisere seg mot Google Cloud Platform med en Service Account`.
+`Sette et GCloud prosjekt`, 
+`Laste ned,pakke ut og installere terraform slik at Travis kan kjøre Terraformkode`,
+`Kjøre terraformkode i repositoryiet`.
+
+Denne oppgaven skal sensor begynne med å ha noen Google cloud `APIER` klare.
+
+Disse apiene kan man gjøre klare ifra Google cloud platform grensesnittet.
+
+## Hvordan fikse disse Apiene:
+
+### Gjennom gui til GCP
+
+- Apiene som skal fikses er `cloud Storage`, `Compute engine api` og `IAM APi`.
+
+- Gå inn til google cloud platform grensesnittet, skriv inn i søkefeltet på api 
+
+navnene nevnt over. Klikk deg til dem, trykk på `Enable APis and services`
+
+### Roller som må gis til service account
+
+Det gis noen roller til `Service accounten`. Rollene som skal gis er `Service Account User`,
+`Service Account Admin`, `Compute Admin` og her husker vi at rollen for `Storage admin` ble gitt
+i siste oppgave.
+
+### Travis filen
+
+Jeg så langt før i oppgaven at man skulle bygge med travis og brukte min tidligere eksamen `travis.yml`
+fil som insprasjon og en god start. Sensor må da ha lik `travis.yml` fil eller som gjør de samme
+stegene.
+
+### Siste del
+
+I `backend.tf` fila skal det gjøres små modifiseringer. Her skal `bucket` navnet endres
+fra det jeg allerede har satt og til det sensore lager i `oppgave 2`. 
+
+### Eksempel:
+
+```
+terraform {
+  backend "gcs" {
+    credentials = "google-key.json"
+    bucket  = "kontebucket" <----- denne endrer sensor til navnet som blir satt fra oppgave 2
+    prefix  = "terraform/state"
+
+  }
+}
+```
+
+### Mmachine type 
+
+For å sette `machine type` så kan man kjøre dette i terminalen:
+
+`travis env set TF_ENV_machine_type f1-micro --public`
+
+Når dette er gjort så skal det pushes til github repositoriet. Når travis byggingen er ferdig og passerer så 
+vil en ny `Virtuel machine` instanse og `machine type` som sensor velger være klar.
 
 
