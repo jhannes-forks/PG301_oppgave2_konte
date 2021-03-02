@@ -1,7 +1,6 @@
 
 [![Build Status](https://travis-ci.com/omamoh18/PG301_oppgave2_konte.svg?token=yMbNk68jXyaqW9Hmq6pJ&branch=main)](https://travis-ci.com/omamoh18/PG301_oppgave2_konte)
 
-
 # Oppgave 2
 
 Her skulle vi lage terraform file som skulle holde på 
@@ -189,7 +188,7 @@ navnene nevnt over. Klikk deg til dem, trykk på `Enable APis and services`
 
 ### Roller som må gis til service account
 
-Det gis noen roller til `Service accounten`. Rollene som skal gis er `Service Account User`,
+Det skal gis noen roller til `Service accounten`. Rollene som skal gis er `Service Account User`,
 `Service Account Admin`, `Compute Admin` og her husker vi at rollen for `Storage admin` ble gitt
 i siste oppgave.
 
@@ -233,6 +232,9 @@ vil en ny `Virtuel machine` instanse og `machine type` som sensor velger være k
 
 - https://github.com/omamoh18/PGR301_Exam_Infrastructure
   
+
+### andre kilder
+
 - https://www.terraform.io/downloads.html
 
 - https://cloud.google.com/sdk/docs/install
